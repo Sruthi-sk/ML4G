@@ -5,12 +5,6 @@ camp_name: "ML4good UK 2025"
 # Example: https://drive.google.com/drive/folders/1ABC123... → folder ID is "1ABC123..."
 drive_folder_id: "14poUxnC595SxZyAjMIrG6HRhjyTgfDCN"  # Leave empty to skip creating shortcuts
 
-teachers:
-  - "Diego"
-  - "Rich"
-  - "Elsa"
-  - "Joël"
-
 form_description: |
   The goal of this form is to allow us to improve ML4Good day by day during the camp, and for the next participants. Thank you for all answers and extra comments.
 
@@ -58,7 +52,7 @@ timetable:
       - name: Q&A on the prerequisites
       - name: Hyperparameters
       - name: Chapter 1 Capabilities
-        reading_group: true
+        groups: ["Diego", "Rich", "Elsa", "Joël"]
       - name: How to create an AGI?
       - name: Agents
       - name: Intro to Cursor
@@ -72,7 +66,7 @@ timetable:
       - name: "TA inspiration"
       - name: "Adversarial Attacks"
       - name: "Chapter 2 AI Risks"
-        reading_group: true
+        groups: ["Diego", "Rich", "Elsa", "Joël"]
       - name: "Transformers"
 
   day_3:
@@ -80,7 +74,7 @@ timetable:
     sessions:
       - name: "Evals"
       - name: "Chapter 3 - Solutions"
-        reading_group: true
+        groups: ["Diego", "Rich", "Elsa", "Joël"]
       - name: "Workshop: Strategy"
       - name: "Assumptions & what's important"
       - name: "One on ones"
@@ -89,7 +83,7 @@ timetable:
     meme: "brain.png"
     sessions:
       - name: "Chapter 4: Governance"
-        reading_group: true
+        groups: ["Diego", "Rich", "Elsa", "Joël"]
       - name: "AI Safety bills"
       - name: "EffiSciences + CeSIA"
       - name: "Literature Review"

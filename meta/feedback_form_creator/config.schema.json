@@ -233,10 +233,20 @@
           "default": null,
           "title": "Description"
         },
-        "reading_group": {
-          "default": false,
-          "title": "Reading Group",
-          "type": "boolean"
+        "groups": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Groups"
         }
       },
       "required": [
@@ -293,13 +303,6 @@
       "default": "",
       "title": "Drive Folder Id",
       "type": "string"
-    },
-    "teachers": {
-      "items": {
-        "type": "string"
-      },
-      "title": "Teachers",
-      "type": "array"
     },
     "form_description": {
       "default": "",

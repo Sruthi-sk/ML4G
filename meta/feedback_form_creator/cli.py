@@ -54,12 +54,12 @@ def build_question_plan(config: CampConfig, day_config: DayConfig) -> list[PlanI
                 high_label="Excellent",
             )
         )
-        if session.reading_group:
+        if session.groups:
             plan.append(
                 ChoiceQuestionConfig(
                     kind="choice",
-                    text=f"Which teacher facilitated the '{session.name}' reading group?",
-                    choices=config.teachers,
+                    text=f"Which group were you in for '{session.name}'?",
+                    choices=session.groups,
                     mandatory=False,
                 )
             )

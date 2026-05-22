@@ -15,7 +15,6 @@ The config is YAML with the structure defined in [`models.py`](./models.py) (`Ca
 ```yaml
 camp_name: "ML4good UK 2025"          # appears in form titles
 drive_folder_id: "1A..."              # forms get moved into this Drive folder
-teachers: [Diego, Rich, Elsa, Joël]
 form_description: |
   ...intro shown at the top of every form...
 pre_questions:                        # asked at the top of every day's form
@@ -29,7 +28,7 @@ timetable:                            # one entry per camp day
     sessions:
       - name: Opening session
       - name: Chapter 1
-        reading_group: true           # adds a "who facilitated?" question
+        groups: [Diego, Rich, Elsa]   # session split into groups (e.g. reading groups); adds a "which group?" question
     day_questions:                    # optional, day-specific extras
       - text: "Are you well settled?"
         kind: paragraph
@@ -38,7 +37,7 @@ post_questions:                       # asked at the end of every day's form
     kind: scale
 ```
 
-For each `day_N`, the generated form contains: pre-questions → per-session rating + (reading-group teacher choice) + feedback → day-specific questions → post-questions → meme image + caption.
+For each `day_N`, the generated form contains: pre-questions → per-session rating + (which-group choice, for sessions with `groups`) + feedback → day-specific questions → post-questions → meme image + caption.
 
 The exact list for any given day is shown by the **Preview** in the web UI; under the hood, `build_question_plan` in `cli.py` is the single source of truth.
 

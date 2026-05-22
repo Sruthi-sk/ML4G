@@ -59,7 +59,10 @@ class SessionConfig(BaseModel):
 
     name: str
     description: str | None = None
-    reading_group: bool = False
+    groups: list[str] | None = None
+    """When the session splits into several groups (e.g. reading groups), list
+    their names here; they become choices for "which group were you in?". Omit
+    for a single-group session."""
 
 
 class DayConfig(BaseModel):
@@ -75,7 +78,6 @@ class CampConfig(BaseModel):
 
     camp_name: str
     drive_folder_id: str = ""
-    teachers: list[str] = Field(default_factory=list)
     form_description: str = ""
     pre_questions: list[AnyQuestionConfig] = Field(default_factory=list)
     timetable: dict[str, DayConfig]
